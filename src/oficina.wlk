@@ -1,3 +1,7 @@
+/*
+ * Oficina OK: Revisa los comentarios que te dejo en los métodos
+ */
+
 import remiseria.*
 
 object oficina {
@@ -20,9 +24,11 @@ object oficina {
     segundaRemisera=unaRemisera
   }
   method intercambiarChoferes(){
+  	/* Muy Bien reutilizando el método asignarRemiseras(r2,r1)   */
     self.asignarRemiseras(segundaRemisera,primerRemisera)
   }
   method remiseraElegidaParaViaje(cliente, kms){
+  	/* Te dejo la pregunta la primera condicion no estaría de más */
     const precioPrimerRemisera = self.remiseraPrimerOpcion().precioViaje(cliente, kms)
     const precioSegundoRemisera = self.remiseraSegundaOpcion().precioViaje(cliente, kms)
     if (precioSegundoRemisera < precioPrimerRemisera and precioSegundoRemisera+30 < precioPrimerRemisera){

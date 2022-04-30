@@ -1,3 +1,6 @@
+/*¨
+ * Remiseras OK - Revisa los comentarios que te dejo en algunos métodos
+ */
 import clientas.*
 object roxana {
 	method precioViaje(cliente, kms) { 
@@ -6,13 +9,13 @@ object roxana {
 }
 
 object gabriela {
-	method precioViaje(cliente, kms) { 
-		return ((cliente.precioPactadoPorKm() * kms) * 20)/100 + (cliente.precioPactadoPorKm() * kms)
-	}
+	/* Forma Resumida y multiplicar por 1.20 para el calculo */
+	method precioViaje(cliente, kms) = cliente.precioPactadoPorKm() * kms * 1.2
 }
 
 object mariela {
 	method precioViaje(cliente, kms) {
+		/*Bien utilizando el max() */
 		return 50.max(cliente.precioPactadoPorKm() * kms)
 	}
 }
