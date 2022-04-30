@@ -1,23 +1,23 @@
+/*¨
+ * Clientes OK - Revisa los comentarios que te dejo en algunos métodos
+ */
+
 import remiseria.*
 object ludmila {
-  method precioPactadoPorKm(){
-   return 18
-  }
-}
+  /* Te dejo la forma resumida de hacer el return directamente */ 
+  method precioPactadoPorKm()=18
+}  
 
 object anaMaria {
 	var estabilidadEconomica = true
-	method precioPactadoPorKm(){
-    	if (self.estaEstable()){
-    		return 30
-    	}else{
-    		return 25
-    	}
-   	}
+	/* Te dejo la forma resumida de hacer el return directamente */ 
+  	method precioPactadoPorKm() =if (self.estaEstable()){30}else{25}
+    
    method estaEstable(){
     	return estabilidadEconomica
   }
   method cambiarEstabilidadEconomica(){
+  	/* Bien cambiando de true a false y viceversa */
   	estabilidadEconomica = !estabilidadEconomica
   }
 }
